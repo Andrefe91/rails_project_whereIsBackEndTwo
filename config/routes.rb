@@ -7,4 +7,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  resources :attempts, only: [:index, :create, :update]
+
+  get "/passed", to: "attempts#passed"
 end
