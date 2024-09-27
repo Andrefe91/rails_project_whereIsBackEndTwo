@@ -1,24 +1,36 @@
-# README
+# WhereIsBackEnd
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is the backend API for a "Where's Waldo" style game, created as part of an activity for [The Odin Project](https://www.theodinproject.com/). The backend is built with Ruby on Rails and serves as the data layer for the game, managing background images, game sessions, and player results.
 
-Things you may want to cover:
+## Features
 
-* Ruby version
+- **RESTful API:** Provides endpoints for fetching game images, registering game sessions, and recording player scores.
+- **Image Management:** Serves large, detailed images used as backgrounds for the game, dynamically fetched by the frontend.
+- **Data Persistence:** Tracks player interactions, game results, and manages leaderboard data.
+- **CORS Handling:** Configured to allow requests from the React frontend.
 
-* System dependencies
+## Frontend Repository
 
-* Configuration
+You can find the repository in this [GitHub Link](https://github.com/Andrefe91/react_project_whereIsFrontEnd)
 
-* Database creation
+## Tech Stack
 
-* Database initialization
+- **Backend:** Ruby on Rails
+- **Database:** PostgreSQL
+- **Authentication:** Basic token-based system (optional for securing certain endpoints)
 
-* How to run the test suite
+## API Endpoints
 
-* Services (job queues, cache servers, search engines, etc.)
+- **GET /public:** Location for the game background images.
+- **GET /characterCoordinates.json:** Get the Json file where the position of the game characters are
+- **GET /passed:** Return the games resolved correctly
+- **POST /attempts/:** Records to database an started game attempt
+- **POST /attempts/1:** Updates the game attempt when it's resolved successfully
 
-* Deployment instructions
+## Contributing
 
-* ...
+Contributions are welcome! Please fork the repository and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License.
